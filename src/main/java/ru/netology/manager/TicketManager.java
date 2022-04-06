@@ -3,6 +3,8 @@ package ru.netology.manager;
 import ru.netology.domain.AirTicket;
 import ru.netology.repository.TicketRepository;
 
+import java.util.Arrays;
+
 public class TicketManager {
     private TicketRepository repository;
 
@@ -25,6 +27,7 @@ public class TicketManager {
                 result = tmp;
             }
         }
+        Arrays.sort(result);
         return result;
     }
 

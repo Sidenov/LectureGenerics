@@ -29,7 +29,7 @@ class AirTicketTest {
         manager.add(fourth);
         manager.add(fifth);
 
-        AirTicket[] expected = {fourth, second, third, first, fifth};
+        AirTicket[] expected = {first, second, third, fourth, fifth};
         AirTicket[] actual = repository.findAll();
 
         assertArrayEquals(expected, actual);
@@ -58,7 +58,7 @@ class AirTicketTest {
 
         repository.removeById(3);
 
-        AirTicket[] expected = {fourth, second, first, fifth};
+        AirTicket[] expected = {first, second, fourth, fifth};
         AirTicket[] actual = repository.findAll();
 
         assertArrayEquals(expected, actual);

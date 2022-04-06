@@ -19,7 +19,6 @@ public class TicketRepository {
         int lastIndex = tmp.length - 1;
         tmp[lastIndex] = newTicket;
         ticket = tmp;
-        Arrays.sort(ticket);
     }
 
     public AirTicket[] findAll() {return ticket;}
